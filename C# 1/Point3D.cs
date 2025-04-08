@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace GeometryNamespace
 {
@@ -20,7 +20,7 @@ namespace GeometryNamespace
         // Метод для вычисления расстояния от точки до начала координат (0, 0, 0)
         public double DistanceToOrigin()
         {
-            return Math.Sqrt(field1 * field1 + field2 * field2 + field3 * field3);
+            return Math.Round(Math.Sqrt(field1 * field1 + field2 * field2 + field3 * field3),3);
         }
 
         // Метод для проверки, находится ли точка на оси X
