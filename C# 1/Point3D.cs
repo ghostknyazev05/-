@@ -26,17 +26,17 @@ namespace GeometryNamespace
         // Метод для проверки, находится ли точка на оси X
         public bool IsOnXAxis()
         {
-            return field2 == 0 && field3 == 0; // Если Y и Z равны 0, точка на оси X
+            return field2 == 0 && field3 == 0; 
         }
 
         // Метод для вычисления угла с осью Z
         public double CalculateAngleWithZAxis()
         {
-            double dotProduct = field3; // Скалярное произведение с вектором оси Z
-            double magnitude = Math.Sqrt(field1 * field1 + field2 * field2 + field3 * field3); // Длина вектора
-            double cosTheta = dotProduct / magnitude; // Косинус угла
-            double angleInRadians = Math.Acos(cosTheta); // Угол в радианах
-            return angleInRadians * (180 / Math.PI); // Преобразование радиан в градусы
+            double dotProduct = field3; 
+            double magnitude = Math.Sqrt(field1 * field1 + field2 * field2 + field3 * field3); 
+            double cosTheta = dotProduct / magnitude; 
+            double angleInRadians = Math.Acos(cosTheta); 
+            return angleInRadians * (180 / Math.PI); 
         }
 
         // Переопределение метода Print для вывода информации о точке
