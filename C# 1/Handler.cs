@@ -14,7 +14,7 @@ namespace GeometryNamespace
             return (x, y, z);
         }
 
-        // Метод проверки корректности введенных данных 
+        
         private static double GetValidDouble(string message)
         {
             double result;
