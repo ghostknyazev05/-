@@ -11,7 +11,7 @@ namespace GeometryNamespace
         // Конструктор копирования, создающий новый объект Point3D на основе другого
         public Point3D(Point3D other) : base(other) { }
 
-        // Переопределение метода ToString для представления объекта в виде строки
+       
         public override string ToString()
         {
             return $"Point3D координаты: X = {field1}, Y = {field2}, Z = {field3}";
@@ -20,10 +20,10 @@ namespace GeometryNamespace
         // Метод для вычисления расстояния от точки до начала координат (0, 0, 0)
         public double DistanceToOrigin()
         {
-            return Math.Round(Math.Sqrt(field1 * field1 + field2 * field2 + field3 * field3),3);
+            return Math.Sqrt(field1 * field1 + field2 * field2 + field3 * field3);
         }
 
-        // Метод для проверки, находится ли точка на оси X
+       // Метод, который используется для того, чтобы узнать, находиться ли точка на оси Х
         public bool IsOnXAxis()
         {
             return field2 == 0 && field3 == 0; 
@@ -34,12 +34,12 @@ namespace GeometryNamespace
         {
             double dotProduct = field3; 
             double magnitude = Math.Sqrt(field1 * field1 + field2 * field2 + field3 * field3); 
-            double cosTheta = dotProduct / magnitude; 
+            double cosTheta = dotProduct / magnitude;
             double angleInRadians = Math.Acos(cosTheta); 
             return angleInRadians * (180 / Math.PI); 
         }
 
-        // Переопределение метода Print для вывода информации о точке
+        
         public override void Print()
         {
             Console.WriteLine(ToString());
